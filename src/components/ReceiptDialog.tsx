@@ -32,7 +32,7 @@ export const ReceiptDialog = ({ open, onOpenChange, receipt }: ReceiptDialogProp
             Thank you for your order, {receipt.customerName}
           </DialogDescription>
         </DialogHeader>
-        
+
         <div className="space-y-4 py-4">
           <div className="border-t border-b py-4 space-y-2">
             <div className="flex justify-between text-sm">
@@ -46,7 +46,7 @@ export const ReceiptDialog = ({ open, onOpenChange, receipt }: ReceiptDialogProp
               <span className="font-medium">{receipt.customerEmail}</span>
             </div>
           </div>
-          
+
           <div className="space-y-2">
             <h4 className="font-semibold">Order Items:</h4>
             {receipt.items.map((item) => (
@@ -55,23 +55,23 @@ export const ReceiptDialog = ({ open, onOpenChange, receipt }: ReceiptDialogProp
                   {item.productName} × {item.qty}
                 </span>
                 <span className="font-medium">
-                  ${(item.price * item.qty).toFixed(2)}
+                  {(item.price * item.qty).toFixed(2)} Rs
                 </span>
               </div>
             ))}
           </div>
-          
+
           <div className="border-t pt-4">
             <div className="flex justify-between items-center">
               <span className="text-lg font-bold">Total:</span>
               <span className="text-2xl font-bold text-primary">
-                ${receipt.total.toFixed(2)}
+                {receipt.total.toFixed(2)} Rs
               </span>
             </div>
           </div>
-          
-          <Button 
-            onClick={() => onOpenChange(false)} 
+
+          <Button
+            onClick={() => onOpenChange(false)}
             className="w-full"
           >
             Close
