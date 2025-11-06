@@ -17,7 +17,7 @@ A full-stack shopping cart application built for Vibe Commerce screening assignm
 ##  Tech Stack
 
 **Frontend:**
-- React 18
+- React 
 - TypeScript
 - Vite
 - TanStack Query (React Query)
