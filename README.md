@@ -2,19 +2,19 @@
 
 A full-stack shopping cart application built for Vibe Commerce screening assignment. This repository contains the **React frontend** that connects to a Node.js/Express/MongoDB backend.
 
-## 🚀 Features
+##  Features
 
-- ✅ Product grid with "Add to Cart" functionality
-- ✅ Shopping cart with item management (add/remove)
-- ✅ Real-time cart total calculation
-- ✅ Checkout form with validation
-- ✅ Order confirmation receipt modal
-- ✅ Responsive design for all devices
-- ✅ Beautiful UI with shadcn/ui components
-- ✅ TypeScript for type safety
-- ✅ Form validation with React Hook Form + Zod
+-  Product grid with "Add to Cart" functionality
+-  Shopping cart with item management (add/remove)
+-  Real-time cart total calculation
+-  Checkout form with validation
+-  Order confirmation receipt modal
+-  Responsive design for all devices
+-  Beautiful UI with shadcn/ui components
+-  TypeScript for type safety
+-  Form validation with React Hook Form + Zod
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend:**
 - React 18
@@ -30,12 +30,12 @@ A full-stack shopping cart application built for Vibe Commerce screening assignm
 - Node.js/Express
 - MongoDB
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Node.js 18+ and npm
 - Backend API running on `http://localhost:5000` (see BACKEND_API_SPEC.md)
 
-## 🚦 Getting Started
+##  Getting Started
 
 ### 1. Clone and Install
 
@@ -66,24 +66,6 @@ npm run dev
 
 The app will be available at `http://localhost:8080`
 
-## 📁 Project Structure
-
-```
-src/
-├── components/
-│   ├── ui/              # shadcn/ui components
-│   ├── ProductCard.tsx  # Product display card
-│   ├── CartSheet.tsx    # Sliding cart panel
-│   ├── CheckoutDialog.tsx # Checkout form modal
-│   └── ReceiptDialog.tsx  # Order confirmation
-├── services/
-│   └── api.ts           # API service layer
-├── types/
-│   └── index.ts         # TypeScript interfaces
-└── pages/
-    └── Index.tsx        # Main application page
-```
-
 ## 🔌 Backend Integration
 
 This frontend requires a backend API with the following endpoints:
@@ -96,7 +78,7 @@ This frontend requires a backend API with the following endpoints:
 
 **See [BACKEND_API_SPEC.md](./BACKEND_API_SPEC.md) for complete API specification.**
 
-## 🎨 Design System
+##  Design System
 
 The app uses a custom design system with:
 - Purple primary color (#8B5CF6)
@@ -104,7 +86,7 @@ The app uses a custom design system with:
 - Consistent spacing and typography
 - Dark mode support
 
-## 📝 Key Components
+##  Key Components
 
 ### ProductCard
 Displays product information with add-to-cart button.
@@ -118,21 +100,21 @@ Form for customer information (name, email) with validation.
 ### ReceiptDialog
 Order confirmation with receipt details and timestamp.
 
-## 🔒 Input Validation
+##  Input Validation
 
 All forms include client-side validation:
 - Name: 2-100 characters
 - Email: Valid email format, max 255 characters
 - Proper error messages and user feedback
 
-## 📱 Responsive Design
+##  Responsive Design
 
 Fully responsive layout with breakpoints:
 - Mobile: 1 column product grid
 - Tablet: 2 columns
 - Desktop: 3-4 columns
 
-## 🧪 Testing the App
+##  Testing the App
 
 1. Ensure backend is running
 2. Start the frontend dev server
