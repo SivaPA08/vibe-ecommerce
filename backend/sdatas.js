@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-// Product Schema
 const productSchema = new mongoose.Schema({
 	id: { type: String, required: true, unique: true },
 	name: { type: String, required: true },
@@ -12,7 +11,6 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product', productSchema);
 
-// Mock Products with image URLs
 const mockProducts = [
 	{
 		id: '1',
@@ -82,30 +80,30 @@ const mockProducts = [
 
 async function seedDatabase() {
 	try {
-		// Connect to MongoDB
+		// connecting mongodb
 		await mongoose.connect(process.env.MONGODB_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});
-		console.log('✅ Connected to MongoDB');
+		console.log('Connected to MongoDB');
 
-		// Clear existing products
+		// clear existing products
 		await Product.deleteMany({});
-		console.log('🗑️  Cleared existing products');
+		console.log('Cleared existing products');
 
-		// Insert mock products
+		// Inserting datas
 		await Product.insertMany(mockProducts);
-		console.log('✅ Seeded 10 mock products');
+		console.log('Seeded 10 mock products');
 
-		console.log('\n📦 Products in database:');
+		console.log('\n Products in database:');
 		mockProducts.forEach(p => {
 			console.log(`  - ${p.name} ($${p.price})`);
 		});
 
 		mongoose.connection.close();
-		console.log('\n✅ Database seeding complete!');
+		console.log('\n Database seeding complete!');
 	} catch (error) {
-		console.error('❌ Seeding error:', error);
+		console.error(' Seeding error:', error);
 		process.exit(1);
 	}
 }
